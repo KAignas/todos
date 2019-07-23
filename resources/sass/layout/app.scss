@@ -1,0 +1,53 @@
+/*======================================================================================
+*
+*
+*     Main application container
+*
+*
+======================================================================================*/
+
+.app {
+    width: 100%;
+    max-width: $app-width;
+    position: fixed; top: 100px; left: 50%; bottom: 100px;
+    margin-left: -$app-width/2;
+
+    @media all and (max-height: 800px){
+        top: 50px; bottom: 50px;
+    }
+
+    @media all and (max-height: 750px){
+        top: 5px; bottom: 5px;
+    }
+
+    @media all and (max-width: $app-width){
+        width: auto;
+        top: 5px; bottom: 5px; left: 5px; right: 5px;
+        margin-left: 0;
+    }
+
+    .nav + &-content {
+        top: 60px;
+    }
+
+    &-content {
+        @extend .bg-gray-100;
+        position: absolute; top: 0; left: 0; right: 0; bottom: 0;
+        overflow-y: auto;
+
+
+        &--login,
+        &--signup {
+            background-color: #fff;
+            padding: 30px 40px;
+
+            @media all and (max-width: $app-width){
+                padding: 20px;
+            }
+        }
+
+        &--event-create {
+            background-color: #fff;
+        }
+    }
+}

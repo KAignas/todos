@@ -1,0 +1,51 @@
+/*======================================================================================
+*
+*
+*     Inputs: [text, number, password]
+*
+*
+======================================================================================*/
+
+input[type="text"],
+input[type="password"],
+input[type="number"],
+textarea,
+select {
+    background-color: transparent;
+    padding: 0 10px;
+    border-bottom: #efefef solid 2px;
+
+    &:focus {
+        outline: 0;
+        box-shadow: none;
+        border-color: $green;
+    }
+}
+
+input[type="text"],
+input[type="password"],
+input[type="number"],
+select {
+    line-height: 40px;
+    height: 40px;
+}
+
+textarea {
+    height: 40px;
+    resize: none;
+}
+
+input:-webkit-autofill,
+input:-webkit-autofill:hover,
+input:-webkit-autofill:focus,
+textarea:-webkit-autofill,
+textarea:-webkit-autofill:hover,
+textarea:-webkit-autofill:focus,
+select:-webkit-autofill,
+select:-webkit-autofill:hover,
+select:-webkit-autofill:focus {
+    -webkit-text-fill-color: currentColor;
+    font-size: $font-size;
+    -webkit-box-shadow: 0 0 0px 1000px transparent;
+    transition: background-color 5000s ease-in-out 0s;
+}

@@ -1,0 +1,46 @@
+/*======================================================================================
+*
+*
+*     Buttons
+*
+*
+======================================================================================*/
+
+.btn {
+    cursor: pointer;
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    height: 60px;
+    padding: 0 20px;
+    white-space: nowrap;
+
+    &:focus,
+    &:active {
+        box-shadow: none;
+        outline: 0;
+    }
+
+    &-block {
+        width: 100%;
+    }
+
+    &-bubble {
+        @include box(60px);
+        border-radius: 50%;
+        overflow: hidden;
+    }
+
+    &-green {
+        color: #fff;
+        transition: background-color .25s;
+    }
+
+    &-green {
+        background-color: $green;
+        &:hover {
+            background-color: darken($green, 10%);
+        }
+    }
+}

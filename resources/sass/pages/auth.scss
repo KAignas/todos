@@ -1,0 +1,32 @@
+/*======================================================================================
+*
+*
+*     Authentication pages
+*
+*
+======================================================================================*/
+
+.app--signup .nav-title { margin-right: 36px; }
+
+.forgot-password {
+    margin: -35px 10px 0 auto;
+}
+
+.login,
+.signup {
+
+    &-content {
+        display: flex;
+        flex-direction: column;
+    }
+
+    .logo {
+        display: block;
+        max-width: 150px;
+        margin: auto auto 100px auto;
+
+        > img {
+            max-width: 100%;
+        }
+    }
+}

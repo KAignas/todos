@@ -1,0 +1,19 @@
+/*======================================================================================
+*
+*
+*     Application
+*
+*
+======================================================================================*/
+
+@import "~tailwindcss/dist/base";
+@import "~tailwindcss/dist/components";
+@import "~tailwindcss/dist/utilities";
+@import "variables";
+@import "plugins/all";
+@import "base/all";
+@import "helpers/all";
+@import "layout/all";
+@import "elements/all";
+@import "components/all";
+@import "pages/all";

@@ -1,0 +1,32 @@
+/*======================================================================================
+*
+*
+*     Form
+*
+*
+======================================================================================*/
+
+.form {
+    &-input {
+        display: flex;
+        flex-direction: column;
+
+        > label {
+            @extend .text-xs;
+            text-transform: uppercase;
+            font-weight: 500;
+            color: $light;
+            margin-bottom: 5px;
+        }
+    }
+
+    &-errors {
+        background-color: #ff563c;
+
+        > li {
+            @extend .text-xs;
+            color: #fff;
+            padding: 5px 20px;
+        }
+    }
+}

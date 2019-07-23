@@ -1,0 +1,72 @@
+/*======================================================================================
+*
+*
+*     Event component
+*
+*
+======================================================================================*/
+
+.events {
+    display: flex;
+    flex-direction: column;
+
+    &-group {
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+
+        &-title {
+            padding: 20px;
+            border-left: transparent solid 5px;
+        }
+
+        &-events {
+            display: flex;
+            flex-direction: column;
+        }
+    }
+}
+
+.event {
+    background-color: #fff;
+    display: flex;
+    align-items: center;
+    padding: 20px;
+    position: relative;
+    border-left: #ccc solid 5px;
+
+    &--completed {
+        .event-details {
+            opacity: .6;
+        }
+    }
+
+    &:before {
+        content: '';
+        background-color: #e9e9e9;
+        position: absolute; top: 100%; left: 20px; right: 20px;
+        z-index: 1;
+        height: 3px;
+        border-radius: 2px;
+    }
+
+    &:last-of-type {
+        &:before { display: none; }
+    }
+
+    &-details {
+        > i {
+            @include box(15px);
+        }
+    }
+
+    &-tools {
+        display: flex;
+        margin-left: auto;
+
+        > a {
+            @include box(30px);
+            padding: 5px;
+        }
+    }
+}

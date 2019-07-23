@@ -1,0 +1,33 @@
+/*======================================================================================
+*
+*
+*     Functions
+*
+*
+======================================================================================*/
+
+
+/* Strip unit */
+
+@function strip-unit($number) {
+  @if type-of($number) == 'number' and not unitless($number) {
+    @return $number / ($number * 0 + 1);
+  }
+
+  @return $number;
+}
+
+
+
+/* Pixels  to rems */
+
+@function rem($size: $font-size){
+  @return strip-unit($size) / strip-unit($font-size) + rem;
+}
+
+
+/* Depth */
+
+@function depth($value: 1){
+  @return map-get($shadows,$value);
+}
